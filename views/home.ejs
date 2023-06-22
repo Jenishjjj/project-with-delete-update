@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            background-color: bisque;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        input{
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            padding: 5px 35px;
+            border-radius: 10px;
+        }
+        td{
+            border-bottom: 2px solid black;
+        }
+        .btn{
+            cursor: pointer;
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="box">
+            <a href="/viewData">View Data</a>
+            <form action="/bookDetail" method="post" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td>Book Title :</td>
+                        <td><input type="text" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td>ISBN code :</td>
+                        <td><input type="text" name="isbn"></td>
+                    </tr>
+                    <tr>
+                        <td>Author name :</td>
+                        <td><input type="text" name="author"></td>
+                    </tr>
+                    <tr>
+                        <td>Publisher name :</td>
+                        <td><input type="text" name="publisher"></td>
+                    </tr>
+                    <tr>
+                        <td>Book quantity :</td>
+                        <td><input type="number" name="quantity"></td>
+                    </tr>
+                    <tr>
+                        <td>Total page :</td>
+                        <td><input type="number" name="total_page"></td>
+                    </tr>
+                    <tr>
+                        <td>Book type :</td>
+                        <td>
+                            <input type="checkbox" name="book_type[]" value="Thriller">Thriller
+                            <input type="checkbox" name="book_type[]" value="Suspense">Suspense
+                            <input type="checkbox" name="book_type[]" value="Drama">Drama
+                            <input type="checkbox" name="book_type[]" value="comedy">comedy
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rating :</td>
+                        <td>
+                            <input type="radio" name="rating" value="5">5
+                            <input type="radio" name="rating" value="6">6
+                            <input type="radio" name="rating"  value="7">7
+                            <input type="radio" name="rating" value="8">8
+                            <input type="radio" name="rating" value="9">9
+                            <input type="radio" name="rating" value="10">10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Published Date :</td>
+                        <td><input type="date" name="published_date"></td>
+                    </tr>
+                    <tr>
+                        <td>Select Image</td>
+                        <td><input type="file" name="image"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Submit" class="btn"></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
